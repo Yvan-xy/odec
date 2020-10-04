@@ -6,7 +6,7 @@ A little decompiler.
 
 ---
 
-[x] Asm to LLVM IR  
-[] LLVM IR to High Level Language  
-[] Optimization identify
-[] Interprocess analysis
+- [x] Asm to LLVM IR  
+- [ ] LLVM IR to High Level Language  
+- [ ] Optimization identify
+- [ ] Interprocess analysis
