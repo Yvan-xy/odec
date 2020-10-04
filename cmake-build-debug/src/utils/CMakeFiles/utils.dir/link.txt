@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libodec-utils.a  CMakeFiles/utils.dir/time.cpp.o CMakeFiles/utils.dir/string.cpp.o CMakeFiles/utils.dir/conversion.cpp.o CMakeFiles/utils.dir/io/log.cpp.o CMakeFiles/utils.dir/io/logger.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libodec-utils.a
