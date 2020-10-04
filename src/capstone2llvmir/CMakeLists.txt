@@ -26,7 +26,7 @@ target_link_libraries(capstone2llvmir
 
 set_target_properties(capstone2llvmir
         PROPERTIES
-        OUTPUT_NAME "retdec-capstone2llvmir"
+        OUTPUT_NAME "odec-capstone2llvmir"
         )
 
 # Install libs.

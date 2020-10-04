@@ -178,4 +178,4 @@ namespace odec {
         }
 
     } // namespace utils
-} // namespace retdec
+} // namespace odec

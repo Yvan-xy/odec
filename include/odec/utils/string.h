@@ -201,6 +201,6 @@ namespace odec {
         std::string extractVersion(const std::string &input);
 
     } // namespace utils
-} // namespace retdec
+} // namespace odec
 
 #endif //ODEC_STRING_H
