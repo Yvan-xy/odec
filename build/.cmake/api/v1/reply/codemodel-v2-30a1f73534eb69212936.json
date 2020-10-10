@@ -1,0 +1,185 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "test",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/capstone2llvmir",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/capstone2llvmir",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/common",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/common",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/utils",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/utils",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"name" : "odec",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "capstone2llvmir::@bd7e410a884bfc6be7a3",
+					"jsonFile" : "target-capstone2llvmir-Debug-17499346b11219b063dd.json",
+					"name" : "capstone2llvmir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "capstone2llvmirtool::@36f028580bb02cc8272a",
+					"jsonFile" : "target-capstone2llvmirtool-Debug-91a3153cdea6c9e9883d.json",
+					"name" : "capstone2llvmirtool",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "common::@af79f3804eddddbfa7f1",
+					"jsonFile" : "target-common-Debug-1984cc8284b5c122df64.json",
+					"name" : "common",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "intrinsics_gen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-intrinsics_gen-Debug-5d7994b5b65ccd990884.json",
+					"name" : "intrinsics_gen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "odec::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-odec-Debug-2630cdbc91609dde8b23.json",
+					"name" : "odec",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "utils::@f1b38b22aeb65474a6c5",
+					"jsonFile" : "target-utils-Debug-9eff19fa07b783b0a2a7.json",
+					"name" : "utils",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/dyf/code/solo/odec/build",
+		"source" : "/Users/dyf/code/solo/odec"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

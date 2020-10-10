@@ -1,0 +1,72 @@
+[
+{
+  "directory": "/Users/dyf/code/solo/odec/build",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIE   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/odec.dir/main.cpp.o -c /Users/dyf/code/solo/odec/main.cpp",
+  "file": "/Users/dyf/code/solo/odec/main.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/test",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -I/Users/dyf/code/solo/odec/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIE   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/capstone2llvmirtool.dir/capstone2llvmtools.cpp.o -c /Users/dyf/code/solo/odec/test/capstone2llvmtools.cpp",
+  "file": "/Users/dyf/code/solo/odec/test/capstone2llvmtools.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/capstone2llvmir",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -I/Users/dyf/code/solo/odec/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/capstone2llvmir.dir/x86/x86_init.cpp.o -c /Users/dyf/code/solo/odec/src/capstone2llvmir/x86/x86_init.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/capstone2llvmir/x86/x86_init.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/capstone2llvmir",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -I/Users/dyf/code/solo/odec/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/capstone2llvmir.dir/x86/x86.cpp.o -c /Users/dyf/code/solo/odec/src/capstone2llvmir/x86/x86.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/capstone2llvmir/x86/x86.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/capstone2llvmir",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -I/Users/dyf/code/solo/odec/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/capstone2llvmir.dir/capstone2llvmir_impl.cpp.o -c /Users/dyf/code/solo/odec/src/capstone2llvmir/capstone2llvmir_impl.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/capstone2llvmir/capstone2llvmir_impl.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/capstone2llvmir",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -I/Users/dyf/code/solo/odec/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/capstone2llvmir.dir/capstone2llvmir.cpp.o -c /Users/dyf/code/solo/odec/src/capstone2llvmir/capstone2llvmir.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/capstone2llvmir/capstone2llvmir.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/capstone2llvmir",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -I/Users/dyf/code/solo/odec/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/capstone2llvmir.dir/exceptions.cpp.o -c /Users/dyf/code/solo/odec/src/capstone2llvmir/exceptions.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/capstone2llvmir/exceptions.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/capstone2llvmir",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -I/Users/dyf/code/solo/odec/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/capstone2llvmir.dir/llvmir_utils.cpp.o -c /Users/dyf/code/solo/odec/src/capstone2llvmir/llvmir_utils.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/capstone2llvmir/llvmir_utils.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/common",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/common.dir/address.cpp.o -c /Users/dyf/code/solo/odec/src/common/address.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/common/address.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/utils",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/utils.dir/time.cpp.o -c /Users/dyf/code/solo/odec/src/utils/time.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/utils/time.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/utils",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/utils.dir/string.cpp.o -c /Users/dyf/code/solo/odec/src/utils/string.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/utils/string.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/utils",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/utils.dir/conversion.cpp.o -c /Users/dyf/code/solo/odec/src/utils/conversion.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/utils/conversion.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/utils",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/utils.dir/io/log.cpp.o -c /Users/dyf/code/solo/odec/src/utils/io/log.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/utils/io/log.cpp"
+},
+{
+  "directory": "/Users/dyf/code/solo/odec/build/src/utils",
+  "command": "/usr/local/opt/llvm/bin/clang++  -I/Users/dyf/code/solo/odec/include -I/usr/local/Cellar/capstone/4.0.2/include/capstone/.. -I/usr/local/Cellar/keystone/0.9.2/include -I/usr/local/opt/llvm/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fPIC   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=c++17 -o CMakeFiles/utils.dir/io/logger.cpp.o -c /Users/dyf/code/solo/odec/src/utils/io/logger.cpp",
+  "file": "/Users/dyf/code/solo/odec/src/utils/io/logger.cpp"
+}
+]

@@ -5,7 +5,6 @@
 #ifndef ODEC_ADDRESS_H
 #define ODEC_ADDRESS_H
 
-
 #include <cstddef>
 #include <ostream>
 #include <set>
@@ -13,62 +12,59 @@
 
 #include "odec/common/range.h"
 
-namespace odec {
-    namespace common {
+namespace odec::common {
 
-        class Address {
-        public:
-            Address();
+class Address {
+public:
+    Address();
 
-            Address(uint64_t a);
+    Address(uint64_t a);
 
-            explicit Address(const std::string &a);
+    explicit Address(const std::string &a);
 
-            operator uint64_t() const;
+    operator uint64_t() const;
 
-            explicit operator bool() const;
+    explicit operator bool() const;
 
-            Address &operator++();
+    Address &operator++();
 
-            Address operator++(int);
+    Address operator++(int);
 
-            Address &operator--();
+    Address &operator--();
 
-            Address operator--(int);
+    Address operator--(int);
 
-            Address &operator+=(const Address &rhs);
+    Address &operator+=(const Address &rhs);
 
-            Address &operator-=(const Address &rhs);
+    Address &operator-=(const Address &rhs);
 
-            Address &operator|=(const Address &rhs);
+    Address &operator|=(const Address &rhs);
 
-            bool isUndefined() const;
+    bool isUndefined() const;
 
-            bool isDefined() const;
+    bool isDefined() const;
 
-            uint64_t getValue() const;
+    uint64_t getValue() const;
 
-            std::string toHexString() const;
+    std::string toHexString() const;
 
-            std::string toHexPrefixString() const;
+    std::string toHexPrefixString() const;
 
-            friend std::ostream &operator<<(std::ostream &out, const Address &a);
+    friend std::ostream &operator<<(std::ostream &out, const Address &a);
 
-        public:
-            static const uint64_t Undefined;
+public:
+    static const uint64_t Undefined;
 
-        private:
-            uint64_t address;
-        };
+private:
+    uint64_t address;
+};
 
-        using AddressRange = Range<Address>;
+using AddressRange = Range<Address>;
 
-        AddressRange stringToAddrRange(const std::string &r);
+AddressRange stringToAddrRange(const std::string &r);
 
-        using AddressRangeContainer = RangeContainer<Address>;
+using AddressRangeContainer = RangeContainer<Address>;
 
-    } // namespace common
-} // namespace odec
+}  // namespace odec::common
 
-
-#endif //ODEC_ADDRESS_H
+#endif  // ODEC_ADDRESS_H

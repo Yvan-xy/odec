@@ -1,0 +1,2 @@
+/usr/bin/ar qc libodec-common.a CMakeFiles/common.dir/address.cpp.o
+/usr/bin/ranlib libodec-common.a

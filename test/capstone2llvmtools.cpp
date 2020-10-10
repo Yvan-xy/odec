@@ -268,23 +268,17 @@ ks_mode capstoneModeBasicToKeystoneMode(cs_arch a, cs_mode m) {
 }
 
 ks_mode capstoneModeExtraToKeystoneMode(cs_arch a, cs_mode m) {
-    if (m == CS_MODE_LITTLE_ENDIAN) // 0
-    {
+    if (m == CS_MODE_LITTLE_ENDIAN) { // 0
         return KS_MODE_LITTLE_ENDIAN;
-    } else if (m == CS_MODE_BIG_ENDIAN) // 1 << 31
-    {
+    } else if (m == CS_MODE_BIG_ENDIAN) { // 1 << 31
         return KS_MODE_BIG_ENDIAN;
-    } else if (a == CS_ARCH_ARM && m == CS_MODE_MCLASS) // 1 << 5
-    {
+    } else if (a == CS_ARCH_ARM && m == CS_MODE_MCLASS) { // 1 << 5
         return KS_MODE_LITTLE_ENDIAN; // There is no MCLASS in Keystone.
-    } else if (a == CS_ARCH_ARM && m == CS_MODE_V8) // 1 << 6
-    {
+    } else if (a == CS_ARCH_ARM && m == CS_MODE_V8) { // 1 << 6
         return KS_MODE_V8;
-    } else if (a == CS_ARCH_MIPS && m == CS_MODE_MICRO) // 1 << 4
-    {
+    } else if (a == CS_ARCH_MIPS && m == CS_MODE_MICRO) { // 1 << 4
         return KS_MODE_MICRO;
-    } else if (a == CS_ARCH_SPARC && m == CS_MODE_V9) // 1 << 4
-    {
+    } else if (a == CS_ARCH_SPARC && m == CS_MODE_V9) { // 1 << 4
         return KS_MODE_V9;
     } else {
         Log::error() << "Can not convert Capstone extra mode to Keystone mode." << std::endl;
