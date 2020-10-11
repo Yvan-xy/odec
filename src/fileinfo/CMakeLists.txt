@@ -1,6 +1,9 @@
+#-------------------------------- odec-fileinfo ----------------------------------
 add_executable(fileinfo
         fileinfo.cpp
+        util/crypto.cpp
         util/format_detector.cpp
+        fileformat/section/section.cpp
         )
 
 
@@ -13,6 +16,7 @@ target_include_directories(fileinfo
 target_link_libraries(fileinfo
         odec::utils
         odec::common
+        OpenSSL::SSL
         )
 
 set_target_properties(fileinfo
@@ -20,9 +24,12 @@ set_target_properties(fileinfo
         OUTPUT_NAME "odec-fileinfo"
         )
 
+#-------------------------------- libodec-fileinfo ----------------------------------
 add_library(fileinfolib STATIC
         fileinfo.cpp
+        util/crypto.cpp
         util/format_detector.cpp
+        fileformat/section/section.cpp
         )
 target_compile_features(fileinfolib PUBLIC cxx_std_17)
 
@@ -35,6 +42,7 @@ target_include_directories(fileinfolib
 target_link_libraries(fileinfolib
         odec::utils
         odec::common
+        OpenSSL::SSL
         )
 
 set_target_properties(fileinfolib

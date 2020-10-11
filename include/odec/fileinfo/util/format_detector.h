@@ -9,20 +9,18 @@
 
 #include "odec/fileinfo/ftypes.h"
 
-namespace odec {
-namespace fileinfo {
+namespace odec::fileinfo {
 
-Format detectFileFormat(const std::string& filePath, bool isRaw = false);
+    Format detectFileFormat(const std::string &filePath, bool isRaw = false);
 
-Format detectFileFormat(std::istream& inputStream, bool isRaw = false);
+    Format detectFileFormat(std::istream &inputStream, bool isRaw = false);
 
 //Format detectFileFormat(const std::uint8_t* data, std::size_t size,
 //                        bool isRaw = false);
 
-std::string format2String(Format format);
+    std::string format2String(Format format);
 
 
-}  // namespace fileinfo
 }  // namespace odec
 
 #endif  // ODEC_FILE_DETECTOR_H

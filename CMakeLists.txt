@@ -51,6 +51,13 @@ message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
 include_directories(${LLVM_INCLUDE_DIRS})
 add_definitions(${LLVM_DEFINITIONS})
 
+# Add openssl
+set(OPENSSL_INCLUDE_DIR "/usr/local/opt/openssl/include/")
+find_package(OpenSSL REQUIRED)
+message(STATUS ${OPENSSL_INCLUDE_DIR})
+include_directories(${OPENSSL_INCLUDE_DIR})
+
+
 # ========================================================
 
 file(GLOB_RECURSE SOURCES "${ODEC_SOURCE_DIR}/*.cpp")

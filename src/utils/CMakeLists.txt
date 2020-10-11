@@ -1,5 +1,6 @@
 
 add_library(utils STATIC
+        crc32.cpp
         time.cpp
         string.cpp
         conversion.cpp

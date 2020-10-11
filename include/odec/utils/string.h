@@ -13,62 +13,61 @@
 #include <vector>
 #include <set>
 
-namespace odec {
-    namespace utils {
+namespace odec::utils {
 
 // We assume that the largest supported character size is 32 bits.
-        using WideCharType = std::uint32_t;
+    using WideCharType = std::uint32_t;
 
 // Strings may have different character sizes, so we need to use a generic
 // basic_string instead of std::string/std::wstring.
-        using WideStringType = std::basic_string<WideCharType>;
+    using WideStringType = std::basic_string<WideCharType>;
 
-        bool hasOnlyDecimalDigits(const std::string &str);
+    bool hasOnlyDecimalDigits(const std::string &str);
 
-        bool hasOnlyHexadecimalDigits(const std::string &str);
+    bool hasOnlyHexadecimalDigits(const std::string &str);
 
-        bool hasNonprintableChars(const std::string &str);
+    bool hasNonprintableChars(const std::string &str);
 
-        bool hasNonasciiChars(const std::string &str);
+    bool hasNonasciiChars(const std::string &str);
 
-        bool isLowerThanCaseInsensitive(const std::string &str1,
-                                        const std::string &str2);
+    bool isLowerThanCaseInsensitive(const std::string &str1,
+                                    const std::string &str2);
 
-        bool areEqualCaseInsensitive(const std::string &str1, const std::string &str2);
+    bool areEqualCaseInsensitive(const std::string &str1, const std::string &str2);
 
-        bool isShorterPrefixOfCaseInsensitive(const std::string &str1,
-                                              const std::string &str2);
+    bool isShorterPrefixOfCaseInsensitive(const std::string &str1,
+                                          const std::string &str2);
 
-        bool contains(const std::string &str, const std::string &sub);
+    bool contains(const std::string &str, const std::string &sub);
 
-        bool containsAny(const std::string &str, const std::vector<std::string> &subs);
+    bool containsAny(const std::string &str, const std::vector<std::string> &subs);
 
-        bool containsCaseInsensitive(const std::string &str, const std::string &sub);
+    bool containsCaseInsensitive(const std::string &str, const std::string &sub);
 
-        bool containsAnyOfChars(const std::string &str, const std::string &chars);
+    bool containsAnyOfChars(const std::string &str, const std::string &chars);
 
-        bool containsAnyOfChars(const std::string &str, std::string::value_type c);
+    bool containsAnyOfChars(const std::string &str, std::string::value_type c);
 
-        std::string toLower(std::string str);
+    std::string toLower(std::string str);
 
-        std::string toUpper(std::string str);
+    std::string toUpper(std::string str);
 
-        std::string toWide(const std::string &str, std::string::size_type length);
+    std::string toWide(const std::string &str, std::string::size_type length);
 
-        std::string unicodeToAscii(const std::uint8_t *bytes, std::size_t nBytes);
+    std::string unicodeToAscii(const std::uint8_t *bytes, std::size_t nBytes);
 
-        std::string unicodeToAscii(const std::uint8_t *bytes, std::size_t nBytes, std::size_t &nRead);
+    std::string unicodeToAscii(const std::uint8_t *bytes, std::size_t nBytes, std::size_t &nRead);
 
-        std::string readNullTerminatedAscii(const std::uint8_t *bytes, std::size_t bytesLen,
-                                            std::size_t offset = 0, std::size_t maxBytes = 0,
-                                            bool failOnExceed = false);
+    std::string readNullTerminatedAscii(const std::uint8_t *bytes, std::size_t bytesLen,
+                                        std::size_t offset = 0, std::size_t maxBytes = 0,
+                                        bool failOnExceed = false);
 
-        std::string trim(std::string str, const std::string &toTrim = " \t\r\n\v");
+    std::string trim(std::string str, const std::string &toTrim = " \t\r\n\v");
 
-        std::vector<std::string> split(const std::string &str, char sep = ',',
-                                       bool trimWhitespace = true);
+    std::vector<std::string> split(const std::string &str, char sep = ',',
+                                   bool trimWhitespace = true);
 
-        std::string unifyLineEnds(const std::string &str);
+    std::string unifyLineEnds(const std::string &str);
 
 /**
 * @brief Joins all the strings in @a strings into a single string.
@@ -81,25 +80,25 @@ namespace odec {
 * If Container is an unordered container, the order depends on the
 * implementation of the container.
 */
-        template<typename Container>
-        std::string joinStrings(const Container &strings,
-                                const std::string &separator = ", ") {
-            std::string joined;
-            for (auto &s : strings) {
-                if (!joined.empty()) {
-                    joined += separator;
-                }
-                joined += s;
+    template<typename Container>
+    std::string joinStrings(const Container &strings,
+                            const std::string &separator = ", ") {
+        std::string joined;
+        for (auto &s : strings) {
+            if (!joined.empty()) {
+                joined += separator;
             }
-            return joined;
+            joined += s;
         }
+        return joined;
+    }
 
 // The number 4 below is needed because of the null byte.
-        std::string addSlashes(const std::string &str,
-                               const std::string &toBackslash = std::string("\"'\\\0", 4));
+    std::string addSlashes(const std::string &str,
+                           const std::string &toBackslash = std::string("\"'\\\0", 4));
 
-        std::string replaceCharsWithStrings(const std::string &str, char what,
-                                            const std::string &withWhat);
+    std::string replaceCharsWithStrings(const std::string &str, char what,
+                                        const std::string &withWhat);
 
 /**
 * @brief Returns @c true if @a str starts with the prefix @a withWhat, @c false
@@ -107,100 +106,99 @@ namespace odec {
 *
 * @tparam String Either @c std::string or <code>char *</code>.
 */
-        template<typename String>
-        bool startsWith(const std::string &str, const String &withWhat) {
-            return str.find(withWhat, 0) == 0;
-        }
+    template<typename String>
+    bool startsWith(const std::string &str, const String &withWhat) {
+        return str.find(withWhat, 0) == 0;
+    }
 
-        bool endsWith(const std::string &str, const std::string &withWhat);
+    bool endsWith(const std::string &str, const std::string &withWhat);
 
-        bool endsWith(const std::string &str, char withWhat);
+    bool endsWith(const std::string &str, char withWhat);
 
-        bool endsWith(const std::string &str, const std::set<std::string> &withWhat);
+    bool endsWith(const std::string &str, const std::set<std::string> &withWhat);
 
-        bool hasSubstringOnPosition(const std::string &str,
-                                    const std::string &withWhat,
-                                    std::string::size_type position);
+    bool hasSubstringOnPosition(const std::string &str,
+                                const std::string &withWhat,
+                                std::string::size_type position);
 
-        bool hasSubstringInArea(const std::string &str, const std::string &withWhat,
-                                std::string::size_type start, std::string::size_type stop);
+    bool hasSubstringInArea(const std::string &str, const std::string &withWhat,
+                            std::string::size_type start, std::string::size_type stop);
 
-        bool isComposedOnlyOfChars(const std::string &str, const std::string &chars);
+    bool isComposedOnlyOfChars(const std::string &str, const std::string &chars);
 
-        bool isComposedOnlyOfChars(const std::string &str, std::string::value_type c);
+    bool isComposedOnlyOfChars(const std::string &str, std::string::value_type c);
 
-        bool isComposedOnlyOfStrings(const std::string &str, const std::string &ss);
+    bool isComposedOnlyOfStrings(const std::string &str, const std::string &ss);
 
-        std::string stripDirs(const std::string &path);
+    std::string stripDirs(const std::string &path);
 
-        std::string replaceAll(const std::string &str, const std::string &from,
-                               const std::string &to);
+    std::string replaceAll(const std::string &str, const std::string &from,
+                           const std::string &to);
 
-        std::string replaceNonprintableChars(const std::string &str);
+    std::string replaceNonprintableChars(const std::string &str);
 
-        std::string replaceNonasciiChars(const std::string &str);
+    std::string replaceNonasciiChars(const std::string &str);
 
-        std::string replaceNonalnumCharsWith(const std::string &str, std::string::value_type c);
+    std::string replaceNonalnumCharsWith(const std::string &str, std::string::value_type c);
 
-        std::string removeWhitespace(std::string s);
+    std::string removeWhitespace(std::string s);
 
-        std::pair<std::size_t, std::size_t> getLineAndColumnFromPosition(
-                const std::string &json, std::size_t position);
+    std::pair<std::size_t, std::size_t> getLineAndColumnFromPosition(
+            const std::string &json, std::size_t position);
 
-        bool isNumber(const std::string &str);
+    bool isNumber(const std::string &str);
 
-        bool isIdentifier(const std::string &str);
+    bool isIdentifier(const std::string &str);
 
-        bool isPrintable(const std::string &str);
+    bool isPrintable(const std::string &str);
 
-        std::string removeLeadingCharacter(
-                const std::string &s,
-                char leading,
-                std::size_t n = std::numeric_limits<std::size_t>::max());
+    std::string removeLeadingCharacter(
+            const std::string &s,
+            char leading,
+            std::size_t n = std::numeric_limits<std::size_t>::max());
 
-        bool isContolCharacter(char c);
+    bool isContolCharacter(char c);
 
-        bool isNiceCharacter(unsigned char c);
+    bool isNiceCharacter(unsigned char c);
 
-        bool isNiceString(const std::string &str, double maxRatio = 2.0 / 3);
+    bool isNiceString(const std::string &str, double maxRatio = 2.0 / 3);
 
-        bool isNiceAsciiWideCharacter(unsigned long long c);
+    bool isNiceAsciiWideCharacter(unsigned long long c);
 
-        bool isNiceAsciiWideString(
-                const std::vector<unsigned long long> &str,
-                double minRatio = 1.0);
+    bool isNiceAsciiWideString(
+            const std::vector<unsigned long long> &str,
+            double minRatio = 1.0);
 
-        std::string getIndentation(std::size_t count, char c = '\t');
+    std::string getIndentation(std::size_t count, char c = '\t');
 
-        void appendHex(std::string &n, const long long a);
+    void appendHex(std::string &n, const long long a);
 
-        void appendDec(std::string &n, const long long a);
+    void appendDec(std::string &n, const long long a);
 
-        std::string appendHexRet(const std::string &n, const long long a);
+    std::string appendHexRet(const std::string &n, const long long a);
 
-        std::string appendDecRet(const std::string &n, const long long a);
+    std::string appendDecRet(const std::string &n, const long long a);
 
-        void removeSuffix(std::string &n, const std::string &suffix = "_");
+    void removeSuffix(std::string &n, const std::string &suffix = "_");
 
-        std::string removeSuffixRet(const std::string &n,
-                                    const std::string &suffix = "_");
+    std::string removeSuffixRet(const std::string &n,
+                                const std::string &suffix = "_");
 
-        std::string normalizeName(const std::string &name);
+    std::string normalizeName(const std::string &name);
 
-        std::string normalizeNamePrefix(const std::string &name);
+    std::string normalizeNamePrefix(const std::string &name);
 
-        bool findFirstInEmbeddedLists(std::size_t &pos, const std::string &str,
-                                      char c, const std::vector<std::pair<char, char>> &pairs);
+    bool findFirstInEmbeddedLists(std::size_t &pos, const std::string &str,
+                                  char c, const std::vector<std::pair<char, char>> &pairs);
 
-        std::string removeConsecutiveSpaces(const std::string &str);
+    std::string removeConsecutiveSpaces(const std::string &str);
 
-        std::string asEscapedCString(const WideStringType &value, std::size_t charSize);
+    std::string asEscapedCString(const WideStringType &value, std::size_t charSize);
 
-        std::string removeComments(const std::string &str, char commentChar);
+    std::string removeComments(const std::string &str, char commentChar);
 
-        std::string extractVersion(const std::string &input);
+    std::string extractVersion(const std::string &input);
 
-    } // namespace utils
 } // namespace odec
 
 #endif //ODEC_STRING_H
